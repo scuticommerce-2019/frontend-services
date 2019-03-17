@@ -1,1 +1,29 @@
-List of microservices
+<div>
+
+  <label>Services:</label>
+
+</div>
+
+<div *ngFor="let server of servers; let i = index">
+
+
+  <div>
+  <label>Server Id {{i}}</label>
+  </div>
+  <div>
+  <label [ngStyle]="{backgroundColor: getStatusColor()}"
+         [ngClass]="{online: true}"> {{server}} is {{getStatus()}}
+  </label>
+  </div>
+
+</div>
+
+<div *ngFor="let service of services">
+  <div class="row">
+    <div class="col-sm-3">{{service.serviceName}}</div>
+    <div class="col-sm-3">{{service.serviceStatus}}</div>
+    <div class="col-sm-3">{{service.serviceIp}}</div>
+    <div class="col-sm-3">{{service.servicePort}}</div>
+  </div>
+
+</div>

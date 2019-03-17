@@ -1,18 +1,21 @@
-<h3>Categories</h3>
+  <div>
+  <h3>Categories</h3>
 
-<form>
   <div>
     <label>Category Code</label>
-    <input type="text" class="form-control" [(ngModel)]="categorycode">
+    <input type="text" class="form-control" [(ngModel)]="categoryCode">
   </div>
   <div>
     <label>Category Name</label>
-    <input type="text" class="form-control" [(ngModel)]="categoryname">
+    <input type="text" class="form-control" [(ngModel)]="categoryName">
   </div>
   <div>
-    <button>Save Category</button>
+    <button class="btn btn-primary" (click)="addCategory()">Save Category</button>
   </div>
-</form>
-
-
+  </div>
+<div *ngIf="successMessage">
+  Created new category with Name: <b>{{categoryName}}</b>  Code: <b>{{categoryCode}}</b>
+</div>
+  <div>
 <app-services></app-services>
+  </div>

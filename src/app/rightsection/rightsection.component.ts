@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightsectionComponent implements OnInit {
 
+  categoryCode = '';
+  categoryName = '';
+  successMessage = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  addCategory() {
+    this.successMessage = true;
+  }
 }
