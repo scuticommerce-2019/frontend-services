@@ -12,6 +12,8 @@ import { ServicesComponent } from './services/services.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductsComponent } from './products/products.component';
 import { CustomersComponent } from './customers/customers.component';
+import { CategoriesComponent } from './categories/categories.component';
+import {CategoriesServices} from './categories/categories.services';
 
 
 // @ts-ignore
@@ -25,14 +27,15 @@ import { CustomersComponent } from './customers/customers.component';
     ServicesComponent,
     OrdersComponent,
     ProductsComponent,
-    CustomersComponent
+    CustomersComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CategoriesServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
