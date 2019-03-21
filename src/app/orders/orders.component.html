@@ -1,3 +1,145 @@
-<p>
-  orders works!
-</p>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Order No</th>
+    <th scope="col">Order Code</th>
+    <th scope="col">Order Date</th>
+    <th scope="col">Status</th>
+    <th scope="col">Merch Total</th>
+    <th scope="col">Order Total</th>
+    <th scope="col">Customer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--
+  <tr *ngFor="let category of categories">
+    <th scope="row">{{category.id}}</th>
+    <td>{{category.name}}</td>
+    <td>{{category.code}}</td>
+  </tr>-->
+  <tr>
+    <td><input type="checkbox"> </td>
+    <td>1</td>
+    <td >ORDER01</td>
+    <td>03/21/2019</td>
+    <td><span class="badge badge-success">ORDERED</span></td>
+    <td>$100</td>
+    <td>$110</td>
+    <td>Kapil Kataria</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<div class="row">
+<div class="col-xs-6">Order Information</div><div class="col-xs-6">Shipment Tracking</div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <div class="col-sm-3">Order #</div>
+    <div class="col-sm-9">1231221</div>
+    <div class="col-sm-3">Order Code</div>
+    <div class="col-sm-9">ORD100</div>
+    <div class="col-sm-3">Date</div>
+    <div class="col-sm-9">03/21/2019</div>
+    <div class="col-sm-3">Order Status</div>
+    <div class="col-sm-9">ORDERED</div>
+  </div>
+  <div class="col-xs-6">
+    <div class="col-sm-3">Tracking #</div>
+    <div class="col-sm-9">UPS1231221</div>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-xs-12"></div>
+</div>
+<div class="row">
+  <div class="col-xs-6">Billing Info</div><div class="col-xs-6">Payment</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="col-sm-3">Customer: </div>
+    <div class="col-sm-9">Kapil Kataria</div>
+    <div class="col-sm-3">Address</div>
+    <div class="col-sm-9">123 First Street</div>
+    <div class="col-sm-3">City</div>
+    <div class="col-sm-9">Pleasanton</div>
+    <div class="col-sm-3">State</div>
+    <div class="col-sm-9">California</div>
+    <div class="col-sm-3">Phone</div>
+    <div class="col-sm-9">123-122-1233</div>
+    <div class="col-sm-3">Email</div>
+    <div class="col-sm-9">validemail@gmail.com</div>
+  </div>
+  <div class="col-xs-6">
+    <div class="col-sm-3">Credit Card</div>
+    <div class="col-sm-9">VI ************4444 for $110.00</div>
+  </div>
+</div>
+<div class="row"  style="margin-bottom: 30px;">
+  <div class="col-xs-12"></div>
+</div>
+<div class="row">
+  <div class="col-xs-6">Shipping Info</div><div class="col-xs-6">Shipping Method</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="col-sm-3">Shipping To: </div>
+    <div class="col-sm-9">Kapil Kataria</div>
+    <div class="col-sm-3">Address</div>
+    <div class="col-sm-9">123 First Street</div>
+    <div class="col-sm-3">City</div>
+    <div class="col-sm-9">Pleasanton</div>
+    <div class="col-sm-3">State</div>
+    <div class="col-sm-9">California</div>
+    <div class="col-sm-3">Phone</div>
+    <div class="col-sm-9">123-122-1233</div>
+    <div class="col-sm-3">Email</div>
+    <div class="col-sm-9">validemail@gmail.com</div>
+  </div>
+  <div class="col-xs-6">
+    <div class="col-sm-9">Flat Rate Shipping 5-7 business days</div>
+    <div class="col-sm-9">Warehouse</div>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Item #</th>
+    <th scope="col">Product</th>
+    <th scope="col">Qty</th>
+    <th scope="col">Price Each</th>
+    <th scope="col">Discount</th>
+    <th scope="col">Total Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>SKU100000</td>
+    <td>Tee Shirt ( Medium , Black) </td>
+    <td>2</td>
+    <td>50</td>
+    <td></td>
+    <td>$100</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="row"  style="margin-bottom: 30px;">
+  <div class="col-xs-12"></div>
+</div>
+<div class="row">
+  <div class="col-xs-8"></div><div class="col-xs-4">Merchandise Total : $100  </div>
+  <div class="col-xs-8"></div><div class="col-xs-4">   Shipping Total : $7.00 </div>
+  <div class="col-xs-8"></div><div class="col-xs-4">Tax Total : $0.00 </div>
+</div>
+<div class="row"  style="margin-bottom: 10px;">
+  <div class="col-xs-12"></div>
+</div>
+<div class="row">
+  <div class="col-xs-8"></div><div class="col-xs-4">Order Total : $110  </div>
+</div>
