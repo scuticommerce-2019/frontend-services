@@ -1,4 +1,4 @@
-export class ServicesModel{
+export class ServicesModel {
   public serviceName: string;
   public serviceStatus: string;
   public serviceIp: string;

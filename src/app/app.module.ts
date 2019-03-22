@@ -21,6 +21,7 @@ import { MarketingComponent } from './marketing/marketing.component';
 import { AdminusersComponent } from './adminusers/adminusers.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { ChartsModule } from 'ng2-charts';
+import {ServerlistServices} from './services/serverlist.services';
 
 
 const approutes: Routes = [
@@ -67,7 +68,7 @@ const approutes: Routes = [
     ChartsModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [CategoriesServices],
+  providers: [CategoriesServices, ServerlistServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
