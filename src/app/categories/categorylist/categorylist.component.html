@@ -1,0 +1,20 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Category Name</th>
+    <th scope="col">Category Code</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let category of categories">
+    <th scope="row">{{category.id}}</th>
+    <td>{{category.name}}</td>
+    <td>{{category.code}}</td>
+    <button class="btn btn-warning" (click)="edit(category.id)">Edit</button>
+
+    <button class="btn btn-danger" (click)="delete(category.id)">Delete</button>
+  </tr>
+  </tbody>
+</table>

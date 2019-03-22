@@ -12,8 +12,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { ProductsComponent } from './products/products.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CategoriesComponent } from './categories/categories.component';
-import {CategoriesServices} from './categories/categories.services';
-import {Route, Routes, RouterModule} from '@angular/router';
+import { CategoriesServices} from './categories/categories.services';
+import { Routes, RouterModule} from '@angular/router';
 import { ConfigsComponent } from './configs/configs.component';
 import { ReportsComponent } from './reports/reports.component';
 import { TemplatesComponent } from './templates/templates.component';
@@ -21,15 +21,24 @@ import { MarketingComponent } from './marketing/marketing.component';
 import { AdminusersComponent } from './adminusers/adminusers.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { ChartsModule } from 'ng2-charts';
-import {ServerlistServices} from './services/serverlist.services';
+import { ServerlistServices} from './services/serverlist.services';
+import { ProductlistComponent } from './products/productlist/productlist.component';
+import { OrderlistComponent } from './orders/orderlist/orderlist.component';
+import { CustomerlistComponent } from './customers/customerlist/customerlist.component';
+import { CategorylistComponent } from './categories/categorylist/categorylist.component';
+import { AdminuserlistComponent } from './adminusers/adminuserlist/adminuserlist.component';
+import { SearchresultlistComponent } from './searchresultlist/searchresultlist.component';
 
 
 const approutes: Routes = [
   {path: 'categories', component: CategoriesComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'orders', component: OrdersComponent},
+  {path: 'orderslist', component: OrderlistComponent},
   {path: 'customers', component: CustomersComponent},
+  {path: 'customerlist', component: CustomerlistComponent},
   {path: 'products', component: ProductsComponent},
+  {path: 'productlist', component: ProductlistComponent},
   {path: 'orders', component: OrdersComponent},
   {path: 'templates', component: TemplatesComponent},
   {path: 'reports', component: ReportsComponent},
@@ -59,7 +68,13 @@ const approutes: Routes = [
     TemplatesComponent,
     MarketingComponent,
     AdminusersComponent,
-    IntegrationsComponent
+    IntegrationsComponent,
+    ProductlistComponent,
+    OrderlistComponent,
+    CustomerlistComponent,
+    CategorylistComponent,
+    AdminuserlistComponent,
+    SearchresultlistComponent
   ],
   imports: [
     BrowserModule,

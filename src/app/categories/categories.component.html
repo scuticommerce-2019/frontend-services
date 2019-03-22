@@ -1,0 +1,39 @@
+<div>
+  <h3>Categories</h3>
+
+  <div>
+    <label>Category Code</label>
+    <input type="text" class="form-control" [(ngModel)]="categoryCode">
+  </div>
+  <div>
+    <label>Category Name</label>
+    <input type="text" class="form-control" [(ngModel)]="categoryName">
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="addCategory()">Save Category</button>
+  </div>
+</div>
+<div *ngIf="successMessage">
+  Created new category with Name: <b>{{categoryName}}</b>  Code: <b>{{categoryCode}}</b>
+</div>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Category Name</th>
+    <th scope="col">Category Code</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let category of categories">
+    <th scope="row">{{category.id}}</th>
+    <td>{{category.name}}</td>
+    <td>{{category.code}}</td>
+    <button class="btn btn-warning" (click)="edit(category.id)">Edit</button>
+
+    <button class="btn btn-danger" (click)="delete(category.id)">Delete</button>
+  </tr>
+  </tbody>
+</table>

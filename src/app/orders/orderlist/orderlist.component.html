@@ -1,0 +1,29 @@
+<h3>Total Orders :: {{orders.length}}</h3>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Order No</th>
+    <th scope="col">Order Code</th>
+    <th scope="col">Order Date</th>
+    <th scope="col">Status</th>
+    <th scope="col">Merch Total</th>
+    <th scope="col">Order Total</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Items</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let order of orders">
+    <td><input type="checkbox"> </td>
+    <td>{{order.id}}</td>
+    <td><a routerLink="/orders">{{order.orderNumber}}</a></td>
+    <td>03/21/2019</td>
+    <td><span class="badge badge-success">ORDERED</span></td>
+    <td>${{order.itemTotal}}</td>
+    <td>${{order.orderTotal}}</td>
+    <td>{{order.email}}</td>
+    <td><span *ngIf="order.items">{{order.items.length}}</span></td>
+  </tr>
+  </tbody>
+</table>

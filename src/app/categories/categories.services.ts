@@ -17,21 +17,21 @@ constructor(private http: HttpClient)  {}
         code: categoryCode
       };
 
-    return this.http.post(SERVER_API_URL_CATALOG_SERVICE + '/api/catalog/add', this.categories);
+    return this.http.post(SERVER_API_URL_CATALOG_SERVICE + '/add', this.categories);
 
   }
 
   getCategories() {
-    return this.http.get(SERVER_API_URL_CATALOG_SERVICE + '/api/catalog/all');
+    return this.http.get(SERVER_API_URL_CATALOG_SERVICE + '/all');
   }
 
 
   deleteCategories(id: string) {
-    return this.http.delete(SERVER_API_URL_CATALOG_SERVICE + '/api/catalog/delete?id=' + id);
+    return this.http.delete(SERVER_API_URL_CATALOG_SERVICE + '/delete?id=' + id);
   }
 
   editCategories(category: CategoriesModel) {
-    return this.http.post(SERVER_API_URL_CATALOG_SERVICE + '/api/catalog/edit', category);
+    return this.http.post(SERVER_API_URL_CATALOG_SERVICE + '/edit', category);
   }
 
 }

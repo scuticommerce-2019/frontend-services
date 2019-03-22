@@ -1,0 +1,31 @@
+<h3>Total Customers :: {{customers.length}}</h3>  <button class="btn-primary" routerLink="/customers">Create Customer</button>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Customer Id</th>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Email</th>
+    <th scope="col">City</th>
+    <th scope="col">State</th>
+    <th scope="col">Zip</th>
+    <th scope="col">Guest</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers">
+    <td><input type="checkbox"> </td>
+    <td>{{customer.id}}</td>
+    <td><a routerLink="/customers">{{customer.firstName}}</a></td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.addresses.city}}</td>
+    <td>{{customer.addresses.state}}</td>
+    <td>{{customer.addresses.zip}}</td>
+    <td>{{customer.guest}}</td>
+  </tr>
+  </tbody>
+</table>
