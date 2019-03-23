@@ -8,7 +8,7 @@ export class ProductsModel {
   public price: string;
   public salePrice: string;
   public brand: string;
-  public category: string;
+  public categories: [];
   public color: string;
   public size: string;
   public code: string;

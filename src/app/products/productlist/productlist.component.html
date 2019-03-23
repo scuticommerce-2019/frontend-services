@@ -26,7 +26,10 @@
     <td><img style="width: 100px;height: 100px" class="rounded" src="{{product.image}}"/></td>
     <td>{{product.color}}</td>
     <td>{{product.size}}</td>
-    <td>{{product.category}}</td>
+    <td><span class="badge badge-success" *ngFor="let category of product.categories">
+      {{category}}
+    </span>
+    </td>
     <td>{{product.price}}</td>
     <td>{{product.salePrice}}</td>
     <td>{{product.brand}}</td>

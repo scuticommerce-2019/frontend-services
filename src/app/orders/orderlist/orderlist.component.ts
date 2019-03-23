@@ -18,7 +18,7 @@ export class OrderlistComponent implements OnInit {
 
     this.getOrders().subscribe(
       (response) => {
-        this.orders = JSON.parse(JSON.stringify(response));
+        this.orders = JSON.parse(JSON.stringify(response)).content;
         console.log('Data' + this.orders);
       },
       (error) => {
