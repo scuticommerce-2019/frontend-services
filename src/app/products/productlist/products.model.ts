@@ -5,8 +5,8 @@ export class ProductsModel {
   public image: string;
   public description: string;
   public sku: string;
-  public price: string;
-  public salePrice: string;
+  public price: number;
+  public salePrice: number;
   public brand: string;
   public categories: [];
   public color: string;

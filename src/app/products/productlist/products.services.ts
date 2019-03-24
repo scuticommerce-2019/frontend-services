@@ -21,4 +21,9 @@ export class ProductsServices {
     return this.http.get(SERVER_API_URL_PRODUCT_SERVICE + '/product' + '?code=' + code);
   }
 
+  getProductsBySkuList(skuCodes: string) {
+    console.log('Get products by sku list ' + skuCodes );
+    return this.http.get(SERVER_API_URL_PRODUCT_SERVICE + '/skus?skus=' + skuCodes);
+  }
+
 }

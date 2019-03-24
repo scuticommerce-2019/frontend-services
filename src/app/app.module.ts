@@ -33,6 +33,10 @@ import { DirectoryComponent } from './directory/directory.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import {ProductsServices} from './products/productlist/products.services';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
+import { CartComponent } from './cart/cart.component';
+import {CartServices} from './cart/cart.services';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { StorefooterComponent } from './storefooter/storefooter.component';
 
 
 const approutes: Routes = [
@@ -59,7 +63,8 @@ const approutes: Routes = [
   },
   {path: 'category/:code', component: DirectoryComponent},
   {path: 'product/:code', component: ProductdetailComponent},
-
+  {path: 'cart', component: CartComponent},
+  {path: 'checkout', component: CheckoutComponent},
 
 ];
 
@@ -91,7 +96,10 @@ const approutes: Routes = [
     AdminComponent,
     DirectoryComponent,
     TopnavComponent,
-    ProductdetailComponent
+    ProductdetailComponent,
+    CartComponent,
+    CheckoutComponent,
+    StorefooterComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +108,7 @@ const approutes: Routes = [
     ChartsModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [CategoriesServices, ServerlistServices, ProductsServices],
+  providers: [CategoriesServices, ServerlistServices, ProductsServices, CartServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

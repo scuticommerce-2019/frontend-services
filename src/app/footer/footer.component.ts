@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  footer  = 'copyright © 2019 ';
+  date = new Date();
+  footer  = 'copyright ©  ' +  this.date.getFullYear();
 
 }
