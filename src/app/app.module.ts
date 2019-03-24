@@ -28,25 +28,38 @@ import { CustomerlistComponent } from './customers/customerlist/customerlist.com
 import { CategorylistComponent } from './categories/categorylist/categorylist.component';
 import { AdminuserlistComponent } from './adminusers/adminuserlist/adminuserlist.component';
 import { SearchresultlistComponent } from './searchresultlist/searchresultlist.component';
+import { AdminComponent } from './admin/admin.component';
+import { DirectoryComponent } from './directory/directory.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import {ProductsServices} from './products/productlist/products.services';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
 
 
 const approutes: Routes = [
-  {path: 'categories', component: CategoriesComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'orders', component: OrdersComponent},
-  {path: 'orderslist', component: OrderlistComponent},
-  {path: 'customers', component: CustomersComponent},
-  {path: 'customerlist', component: CustomerlistComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'productlist', component: ProductlistComponent},
-  {path: 'orders', component: OrdersComponent},
-  {path: 'templates', component: TemplatesComponent},
-  {path: 'reports', component: ReportsComponent},
-  {path: 'marketing', component: MarketingComponent},
-  {path: 'configs', component: ConfigsComponent},
-  {path: 'services', component: ServicesComponent},
-  {path: 'integrations', component: IntegrationsComponent},
-  {path: 'adminusers', component: AdminusersComponent}
+
+  {path: 'admin', component: AdminComponent, children: [
+      {path: 'categories', component: CategoriesComponent},
+      {path: 'products', component: ProductsComponent},
+      {path: 'orders', component: OrdersComponent},
+      {path: 'orderslist', component: OrderlistComponent},
+      {path: 'customers', component: CustomersComponent},
+      {path: 'customerlist', component: CustomerlistComponent},
+      {path: 'products', component: ProductsComponent},
+      {path: 'productlist', component: ProductlistComponent},
+      {path: 'orders', component: OrdersComponent},
+      {path: 'templates', component: TemplatesComponent},
+      {path: 'reports', component: ReportsComponent},
+      {path: 'marketing', component: MarketingComponent},
+      {path: 'configs', component: ConfigsComponent},
+      {path: 'services', component: ServicesComponent},
+      {path: 'integrations', component: IntegrationsComponent},
+      {path: 'adminusers', component: AdminusersComponent},
+      {path: 'searchlist', component: SearchresultlistComponent}
+    ]
+  },
+  {path: 'category/:code', component: DirectoryComponent},
+  {path: 'product/:code', component: ProductdetailComponent},
+
 
 ];
 
@@ -74,7 +87,11 @@ const approutes: Routes = [
     CustomerlistComponent,
     CategorylistComponent,
     AdminuserlistComponent,
-    SearchresultlistComponent
+    SearchresultlistComponent,
+    AdminComponent,
+    DirectoryComponent,
+    TopnavComponent,
+    ProductdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +100,7 @@ const approutes: Routes = [
     ChartsModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [CategoriesServices, ServerlistServices],
+  providers: [CategoriesServices, ServerlistServices, ProductsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@ export class ProductlistComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getOrders().subscribe(
+    this.getProducts().subscribe(
       (response) => {
         this.products = JSON.parse(JSON.stringify(response));
         console.log('Data' + this.products);
@@ -26,7 +26,7 @@ export class ProductlistComponent implements OnInit {
     );
   }
 
-  getOrders() {
+  getProducts() {
     return this.http.get(SERVER_API_URL_PRODUCT_SERVICE + '/products');
   }
 

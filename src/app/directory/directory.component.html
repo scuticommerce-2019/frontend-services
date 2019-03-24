@@ -1,0 +1,20 @@
+<hr>
+
+<section class="category-section spad">
+  <div class="container">
+    <div class="row">
+      <div><h5>Products Available : {{products.length}}</h5></div>
+    </div>
+        <div class="row">
+              <div *ngFor="let product of products" class="col-xs-4">
+                    <div>
+                      <img [routerLink]="['/product',product.code]" style="width: 300px;height: 300px" src="{{product.image}}" alt="">
+                    </div>
+                    <div>
+                      <h6>${{product.price}}</h6>
+                      <p>{{product.name}}</p>
+                    </div>
+              </div>
+      </div>
+  </div>
+</section>

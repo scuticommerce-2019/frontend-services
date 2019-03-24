@@ -1,1 +1,278 @@
 /* You can add global styles to this file, and also import other style files */
+.main-navbar {
+  background: #282828;
+}
+
+.main-menu {
+  list-style: none;
+}
+
+.main-menu li {
+  display: inline-block;
+  position: relative;
+}
+
+.main-menu li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 50px;
+  line-height: 1;
+  padding: 17px 0;
+  position: relative;
+}
+
+.main-menu li a .new {
+  position: absolute;
+  top: -8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: red;
+  line-height: 1;
+  text-transform: uppercase;
+  left: calc(50% - 21px);
+  padding: 5px 9px 1px;
+  border-radius: 15px;
+  width: 42px;
+}
+
+.main-menu li:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+}
+
+.main-menu li:hover>a {
+  color: orange;
+}
+
+.main-menu .sub-menu {
+  position: absolute;
+  list-style: none;
+  width: 220px;
+  left: 0;
+  top: 100%;
+  padding: 20px 0;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 50px;
+  background: #fff;
+  z-index: 99;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.main-menu .sub-menu li {
+  display: block;
+}
+
+.main-menu .sub-menu li a {
+  display: block;
+  color: #000;
+  margin-right: 0;
+  padding: 8px 20px;
+}
+
+.main-menu .sub-menu li a:hover {
+  color: #f51167;
+}
+
+.header-top {
+  padding: 18px 0 14px;
+}
+
+.site-logo {
+  display: inline-block;
+}
+
+.header-search-form {
+  width: 100%;
+  position: relative;
+  padding: 0 10px;
+}
+
+.header-search-form input {
+  width: 100%;
+  height: 44px;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 19px;
+  background: #f0f0f0;
+}
+
+.header-search-form button {
+  position: absolute;
+  height: 100%;
+  right: 18px;
+  top: 0;
+  font-size: 26px;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.shopping-card {
+  display: inline-block;
+  position: relative;
+}
+
+.shopping-card span {
+  position: absolute;
+  top: -4px;
+  left: 100%;
+  height: 16px;
+  min-width: 16px;
+  color: #fff;
+  font-size: 13px;
+  background: #f51167;
+  text-align: center;
+  border-radius: 30px;
+  padding: 0 2px;
+  margin-left: -7px;
+}
+
+.product-pic-zoom {
+  margin-bottom: 35px;
+}
+
+.product-big-img{
+  width: 600px;
+  height: 600px;
+
+}
+
+.product-details .p-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #414141;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.product-details .p-price {
+  font-size: 24px;
+  color: #414141;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-details .p-stock {
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  color: #414141;
+  margin-bottom: 10px;
+}
+
+.back-link {
+  padding-bottom: 50px;
+}
+
+.back-link a {
+  font-size: 12px;
+  color: #414141;
+}
+
+.site-btn {
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 167px;
+  padding: 18px 47px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: orange;
+  color: #fff;
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Accordion */
+
+.accordion-area {
+  margin-top: 50px;
+  border-top: 2px solid #e1e1e1;
+}
+
+.accordion-area .panel {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.accordion-area .panel-link {
+  background-image: url("/src/assets/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px top 30px;
+}
+
+.faq-accordion.accordion-area .panel-link,
+.faq-accordion.accordion-area .panel-link.active.collapsed {
+  padding: 17px 100px 17px 20px;
+}
+
+.faq-accordion.accordion-area .panel-link:after {
+  right: 44px;
+}
+
+.accordion-area .panel-header .panel-link.collapsed {
+  background-image: url("/src/assets/arrow-down.png");
+}
+
+.accordion-area .panel-link.active {
+  background-image: url("/src/assets/arrow-up.png");
+}
+
+.accordion-area .panel-link.active {
+  background-color: transparent;
+}
+
+.accordion-area .panel-link,
+.accordion-area .panel-link.active.collapsed {
+  text-align: left;
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #414141;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  min-height: 69px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.accordion-area .panel-body {
+  padding-top: 10px;
+}
+
+.accordion-area .panel-body p {
+  color: #8f8f8f;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.accordion-area .panel-body p span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: orange;
+}
+
+.accordion-area .panel-body img {
+  margin-bottom: 25px;
+}
+
+.accordion-area .panel-body h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

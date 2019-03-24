@@ -25,6 +25,10 @@ constructor(private http: HttpClient)  {}
     return this.http.get(SERVER_API_URL_CATALOG_SERVICE + '/all');
   }
 
+  getTopCategories() {
+    return this.http.get(SERVER_API_URL_CATALOG_SERVICE + '/category');
+  }
+
 
   deleteCategories(id: string) {
     return this.http.delete(SERVER_API_URL_CATALOG_SERVICE + '/delete?id=' + id);
