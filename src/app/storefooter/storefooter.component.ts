@@ -9,7 +9,7 @@ export class StorefooterComponent implements OnInit {
 
 
   date = new Date();
-  footer  = 'copyright ©  ' +  this.date.getFullYear();
+  footer  = 'Copyright ©  ' +  this.date.getFullYear() + ' All Rights Reserved';
 
   constructor() { }
 

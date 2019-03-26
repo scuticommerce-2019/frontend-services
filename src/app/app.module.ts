@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Routes, RouterModule} from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftnavComponent } from './leftnav/leftnav.component';
@@ -13,14 +16,12 @@ import { ProductsComponent } from './products/products.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesServices} from './categories/categories.services';
-import { Routes, RouterModule} from '@angular/router';
 import { ConfigsComponent } from './configs/configs.component';
 import { ReportsComponent } from './reports/reports.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { MarketingComponent } from './marketing/marketing.component';
 import { AdminusersComponent } from './adminusers/adminusers.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
-import { ChartsModule } from 'ng2-charts';
 import { ServerlistServices} from './services/serverlist.services';
 import { ProductlistComponent } from './products/productlist/productlist.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
@@ -31,12 +32,15 @@ import { SearchresultlistComponent } from './searchresultlist/searchresultlist.c
 import { AdminComponent } from './admin/admin.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { TopnavComponent } from './topnav/topnav.component';
-import {ProductsServices} from './products/productlist/products.services';
+import { ProductsServices} from './products/productlist/products.services';
 import { ProductdetailComponent } from './productdetail/productdetail.component';
 import { CartComponent } from './cart/cart.component';
-import {CartServices} from './cart/cart.services';
+import { CartServices} from './cart/cart.services';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StorefooterComponent } from './storefooter/storefooter.component';
+import { RecommendationComponent } from './recommendation/recommendation.component';
+import {RecommendationServices} from './recommendation/recommendation.services';
+import {SearchServices} from './searchresultlist/search.services';
 
 
 const approutes: Routes = [
@@ -99,16 +103,18 @@ const approutes: Routes = [
     ProductdetailComponent,
     CartComponent,
     CheckoutComponent,
-    StorefooterComponent
+    StorefooterComponent,
+    RecommendationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ChartsModule,
+    NgbModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [CategoriesServices, ServerlistServices, ProductsServices, CartServices],
+  providers: [CategoriesServices, ServerlistServices, ProductsServices, CartServices, RecommendationServices, SearchServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

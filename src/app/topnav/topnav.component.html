@@ -9,11 +9,8 @@
           </a>
         </div>
         <div class="col-xl-6 col-lg-5">
-          <form class="header-search-form">
-            <input type="text" placeholder="Search...">
-            <button><i class="flaticon-search"></i></button>
-          </form>
-        </div>
+            <input id="typeahead-basic" type="text" class="form-control" [resultFormatter]="formatter" [ngbTypeahead]="search"/>
+           </div>
         <div class="col-xl-4 col-lg-5">
           <div class="user-panel">
             <div class="up-item">
@@ -39,13 +36,11 @@
          <li *ngFor="let cat of topcategories">
            <a [routerLink]="['/category',cat.code]" href="#">{{cat.name}}</a>
          </li>
-         <li><a href="#">Pages</a>
+         <li><a href="#">Sale</a>
            <ul class="sub-menu">
-             <li><a href="./product.html">Product Page</a></li>
-             <li><a href="./category.html">Category Page</a></li>
-             <li><a href="./cart.html">Cart Page</a></li>
-             <li><a href="./checkout.html">Checkout Page</a></li>
-             <li><a href="./contact.html">Contact Page</a></li>
+             <li><a href="#">30% Off</a></li>
+             <li><a href="#">50% Off</a></li>
+             <li><a href="#">Clearance</a></li>
            </ul>
          </li>
        </ul>
