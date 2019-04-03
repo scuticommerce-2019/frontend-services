@@ -41,12 +41,15 @@ import { StorefooterComponent } from './storefooter/storefooter.component';
 import { RecommendationComponent } from './recommendation/recommendation.component';
 import {RecommendationServices} from './recommendation/recommendation.services';
 import {SearchServices} from './searchresultlist/search.services';
+import {UploadFileService} from './products/upload-file.service';
+import {AdminuserServices} from './adminusers/adminuser.services';
 
 
 const approutes: Routes = [
 
   {path: 'admin', component: AdminComponent, children: [
       {path: 'categories', component: CategoriesComponent},
+      {path: 'categorieslist', component: CategorylistComponent},
       {path: 'products', component: ProductsComponent},
       {path: 'orders', component: OrdersComponent},
       {path: 'orderslist', component: OrderlistComponent},
@@ -62,6 +65,7 @@ const approutes: Routes = [
       {path: 'services', component: ServicesComponent},
       {path: 'integrations', component: IntegrationsComponent},
       {path: 'adminusers', component: AdminusersComponent},
+      {path: 'adminuserslist', component: AdminuserlistComponent},
       {path: 'searchlist', component: SearchresultlistComponent}
     ]
   },
@@ -114,7 +118,8 @@ const approutes: Routes = [
     NgbModule,
     RouterModule.forRoot(approutes)
   ],
-  providers: [CategoriesServices, ServerlistServices, ProductsServices, CartServices, RecommendationServices, SearchServices],
+  providers: [CategoriesServices, ServerlistServices, ProductsServices, CartServices,
+    RecommendationServices, SearchServices, UploadFileService, AdminuserServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

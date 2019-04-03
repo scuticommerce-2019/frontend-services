@@ -10,11 +10,12 @@ export class CategoriesServices {
 
 constructor(private http: HttpClient)  {}
 
-  addCategories(categoryName: string, categoryCode: string) {
+  addCategories(categoryName: string, categoryCode: string, topLevel: number) {
 
     this.categories = {
         name: categoryName,
-        code: categoryCode
+        code: categoryCode,
+        level: topLevel
       };
 
     return this.http.post(SERVER_API_URL_CATALOG_SERVICE + '/add', this.categories);

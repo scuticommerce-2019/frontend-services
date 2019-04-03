@@ -1,63 +1,40 @@
 <h3>Create Admin User</h3>
-<form class="forms-sample">
+<form class="forms-sample" #adminuser="ngForm" (ngSubmit)="createAdminUser(adminuser)"  novalidate>
   <div class="form-group row">
-    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">User Name</label>
+    <label  class="col-sm-3 col-form-label">User Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
+      <input type="text" class="form-control" [(ngModel)]="adminuser.username" name="username"  placeholder="Username">
     </div>
   </div>
   <div class="form-group row">
-    <label for="exampleInputUsername2" class="col-sm-3 col-form-label"> Name</label>
+    <label  class="col-sm-3 col-form-label">Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control"  placeholder="name">
+      <input type="text" class="form-control" [(ngModel)]="adminuser.name" name="name" placeholder="name">
     </div>
   </div>
   <div class="form-group row">
-    <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+    <label class="col-sm-3 col-form-label">Email</label>
     <div class="col-sm-9">
-      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+      <input type="email" class="form-control" [(ngModel)]="adminuser.email" name="email" placeholder="Email">
     </div>
   </div>
   <div class="form-group row">
-    <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
+    <label class="col-sm-3 col-form-label">Password</label>
     <div class="col-sm-9">
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+      <input type="password" class="form-control" [(ngModel)]="adminuser.password" name="password" placeholder="Password">
     </div>
   </div>
   <div class="form-group row">
-    <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re Password</label>
+    <label class="col-sm-3 col-form-label">Re Password</label>
     <div class="col-sm-9">
-      <input type="password" class="form-control" id="exampleInputConfirmPassword2" placeholder="Password">
+      <input type="password" class="form-control" [(ngModel)]="adminuser.repassword" name="repassword"  placeholder="Re Password">
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Role</label>
-    <div class="col-sm-9"><input type="text" class="form-control" placeholder="roles">
+    <div class="col-sm-9"><input type="text" [(ngModel)]="adminuser.roles" name="roles"  class="form-control" placeholder="roles">
     </div>
   </div>
   <button type="submit" class="btn btn-primary mr-2">Submit</button>
   <button class="btn btn-light">Cancel</button>
 </form>
-
-
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">Username</th>
-    <th scope="col">Name</th>
-    <th scope="col">Role</th>
-    <th scope="col">Status</th>
-    <th scope="col">Action</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>admin@valid.com</td>
-    <td>Kapil Kataria</td>
-    <td>ADMIN</td>
-    <td><span class="badge badge-success">Active</span></td>
-    <td> <button type="submit" class="btn btn-danger">Remove</button>
-      <button class="btn btn-warning">Edit</button></td>
-  </tr>
-  </tbody>
-</table>

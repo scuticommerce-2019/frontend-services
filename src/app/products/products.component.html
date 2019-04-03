@@ -1,96 +1,112 @@
 <h4>Create Product</h4>
+<form #product="ngForm" (ngSubmit)="createProduct(product)"  novalidate>
 <div class="forms-sample">
   <div class="form-group row">
     <label class="col-sm-3 col-form-label">Product Code</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="product code">
+      <input type="text" class="form-control" [(ngModel)]="product.code" name="code" placeholder="product code">
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Product Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="product name">
+      <input type="text" class="form-control" [(ngModel)]="product.name" name="name" placeholder="product name">
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Short Description</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="short description">
+      <input type="text" class="form-control"  [(ngModel)]="product.description"  name="description" placeholder="short description">
     </div>
   </div>
   <div class="form-group row">
     <label class="col-sm-3 col-form-label">Active</label>
     <div class="col-sm-9">
-      <input type="checkbox" class="form-check-input"  value="" checked="">
+      <input type="checkbox" class="form-check-input" [(ngModel)]="product.status"  name="status"  value="" checked="">
     </div>
   </div>
   <div class="form-group row">
     <label class="col-sm-3 col-form-label">Date Range</label>
     <div class="col-sm-9">
-      <div class="col-lg-6">Start Date : <input type="date" class="form-check-input"></div>
-      <div class="col-lg-6">End Date :  <input type="date" class="form-check-input"></div>
+      <div class="col-lg-6">Start Date : <input type="date" [(ngModel)]="product.startdate"  name="startdate" class="form-check-input"></div>
+      <div class="col-lg-6">End Date :  <input type="date" [(ngModel)]="product.enddate" name="enddate" class="form-check-input"></div>
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Long Description</label>
     <div class="col-sm-9">
-      <textarea rows="4" class="form-control" placeholder="long description"></textarea>
+      <textarea rows="4" class="form-control" [(ngModel)]="product.longdescription" name="longdescription"  placeholder="long description"></textarea>
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Image</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="image url">
+      <input type="text" class="form-control" [(ngModel)]="filename" name="image" placeholder="image url">
     </div>
+    <div *ngIf="currentFileUpload" class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+           aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+        {{progress.percentage}}%</div>
+    </div>
+
+    <label class="btn btn-default">
+      <input type="file" (change)="selectFile($event)">
+    </label>
+
+    <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
   </div>
+
+
 
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">SKU</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="SKU">
+      <input type="text" class="form-control" [(ngModel)]="product.sku" name="sku"  placeholder="SKU">
     </div>
   </div>
 
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Color</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="color">
+      <input type="text" class="form-control" [(ngModel)]="product.color" name="color"  placeholder="color">
     </div>
   </div>
 
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Size</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="size">
+      <input type="text" class="form-control" [(ngModel)]="product.size"  name="size"  placeholder="size">
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Price</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="price">
+      <input type="text" class="form-control" [(ngModel)]="product.price"  name="price"  placeholder="price">
     </div>
   </div>
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Stock</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="stock">
+      <input type="text" class="form-control" [(ngModel)]="product.stock" name="stock"  placeholder="stock">
     </div>
   </div>
 
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Keywords</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="keywords">
+      <input type="text" class="form-control" [(ngModel)]="product.keywords" name="keywords"  placeholder="keywords">
     </div>
   </div>
 
   <div class="form-group row">
     <label  class="col-sm-3 col-form-label">Categories</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="categories">
+      <input type="text" class="form-control" [(ngModel)]="product.categories" name="categories"  placeholder="categories">
     </div>
   </div>
 
   <button type="submit" class="btn btn-primary mr-2">Submit</button>
   <button class="btn btn-light">Cancel</button>
 </div>
+</form>

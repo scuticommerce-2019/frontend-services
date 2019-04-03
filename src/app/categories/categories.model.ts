@@ -2,6 +2,7 @@ export class CategoriesModel {
 
   public code: string;
   public name: string;
+  public toplevel: number;
   public id: string;
   public parent: CategoriesModel;
 

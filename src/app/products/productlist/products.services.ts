@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {SERVER_API_URL_PRODUCT_SERVICE} from '../../common/services.config';
+import {ProductsModel} from './products.model';
 
 @Injectable()
 export class ProductsServices {
@@ -19,6 +20,11 @@ export class ProductsServices {
   getProductDetail(code: string) {
     console.log('Get product detail ' + code );
     return this.http.get(SERVER_API_URL_PRODUCT_SERVICE + '/product' + '?code=' + code);
+  }
+
+  createProduct(product: ProductsModel) {
+    console.log(' product detail ' + product );
+    return this.http.post(SERVER_API_URL_PRODUCT_SERVICE + '/create', product);
   }
 
   getProductsBySkuList(skuCodes: string) {
